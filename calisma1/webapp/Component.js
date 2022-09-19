@@ -3,11 +3,12 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "calisma1/model/models"
-    ],
-    function (UIComponent, Device, models) {
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "calisma1/model/models",
+    "sap/ui/model/json/JSONModel"
+],
+    function (UIComponent, Device, models, JSONModel) {
         "use strict";
 
         return UIComponent.extend("calisma1.Component", {
@@ -21,6 +22,16 @@ sap.ui.define([
              * @override
              */
             init: function () {
+
+                // set data model
+                var oData = {
+                    recipient: {
+                        name: "World"
+                    }
+                };
+                var oModel = new JSONModel(oData);
+                this.setModel(oModel);
+
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
 
