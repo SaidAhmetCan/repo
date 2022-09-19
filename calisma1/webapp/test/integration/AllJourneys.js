@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "com.said.calisma1.view.",
+		viewNamespace: "calisma1.view.",
 		autoWait: true
 	});
 });

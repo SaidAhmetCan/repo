@@ -39,8 +39,8 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "Başlık",
-									"targetURL": "#comsaidcalisma1-display"
+									"title": "Denemeler",
+									"targetURL": "#calisma1-display"
 								}
 							}]
 						}]
@@ -51,18 +51,18 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"comsaidcalisma1-display": {
-								"semanticObject": "comsaidcalisma1",
+							"calisma1-display": {
+								"semanticObject": "calisma1",
 								"action": "display",
-								"description": "Fiori uygulamalarım",
-								"title": "Başlık",
+								"description": "A Fiori application.",
+								"title": "Denemeler",
 								"signature": {
 									"parameters": {}
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=com.said.calisma1",
-									"url": sap.ui.require.toUrl("com/said/calisma1")
+									"additionalInformation": "SAPUI5.Component=calisma1",
+									"url": sap.ui.require.toUrl("calisma1")
 								}
 							}
 						}

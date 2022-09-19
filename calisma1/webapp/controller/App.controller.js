@@ -5,7 +5,7 @@ sap.ui.define(
     function(BaseController) {
       "use strict";
   
-      return BaseController.extend("com.said.calisma1.controller.App", {
+      return BaseController.extend("calisma1.controller.App", {
         onInit() {
         }
       });

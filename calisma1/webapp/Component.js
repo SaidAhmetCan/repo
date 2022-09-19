@@ -5,12 +5,12 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "com/said/calisma1/model/models"
+        "calisma1/model/models"
     ],
     function (UIComponent, Device, models) {
         "use strict";
 
-        return UIComponent.extend("com.said.calisma1.Component", {
+        return UIComponent.extend("calisma1.Component", {
             metadata: {
                 manifest: "json"
             },

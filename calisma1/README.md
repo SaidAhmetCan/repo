@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Mon Sep 19 2022 18:14:51 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Sep 19 2022 18:55:42 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.7.4|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -9,8 +9,8 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A
 |**Module Name**<br>calisma1|
-|**Application Title**<br>Başlık|
-|**Namespace**<br>com.said|
+|**Application Title**<br>Denemeler|
+|**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.106.0|
 |**Enable Code Assist Libraries**<br>False|
@@ -18,7 +18,7 @@
 
 ## calisma1
 
-Fiori uygulamalarım
+A Fiori application.
 
 ### Starting the generated app
 

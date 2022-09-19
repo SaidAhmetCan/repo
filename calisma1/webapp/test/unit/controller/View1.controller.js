@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"comsaid/calisma1/controller/View1.controller"
+	"calisma1/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 

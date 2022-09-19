@@ -1,6 +1,6 @@
 /* global QUnit */
 
-sap.ui.require(["com/said/calisma1/test/integration/AllJourneys"
+sap.ui.require(["calisma1/test/integration/AllJourneys"
 ], function () {
 	QUnit.config.autostart = false;
 	QUnit.start();

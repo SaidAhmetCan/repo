@@ -1,7 +1,7 @@
 {
-  "_version": "1.45.0",
+  "_version": "127.0.0.1:3001",
   "sap.app": {
-    "id": "com.said.calisma1",
+    "id": "calisma1",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.7.4",
-      "toolsId": "24ed9256-2a98-495b-a206-f637c4c80606"
+      "toolsId": "6f19d569-827b-4397-9040-45e1d2912d49"
     },
     "dataSources": {
       "mainService": {
@@ -66,7 +66,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.said.calisma1.i18n.i18n"
+          "bundleName": "calisma1.i18n.i18n"
         }
       },
       "": {
@@ -87,7 +87,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "com.said.calisma1.view",
+        "viewPath": "calisma1.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -112,7 +112,7 @@
       }
     },
     "rootView": {
-      "viewName": "com.said.calisma1.view.App",
+      "viewName": "calisma1.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"comsaid/calisma1/test/unit/AllTests"
+		"calisma1/test/unit/AllTests"
 	], function () {
 		QUnit.start();
 	});
