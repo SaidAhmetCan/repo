@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.said.calisma1.controller.View1" displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
-            <Button xmlns="sap.m" text="Deneme" id="button0"/>
+            <Button xmlns="sap.m" text="Deneme2" id="button0"/>
         </content>
     </Page>
 </mvc:View>
