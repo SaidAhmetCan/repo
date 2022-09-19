@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/json/JSONModel",
     "../model/formatter"
-],
+], 
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
@@ -11,7 +11,7 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("calisma1.controller.View1", {
-            
+
             formatter: formatter,
 
             onInit: function () {

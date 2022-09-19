@@ -27,7 +27,7 @@
                                 <ObjectStatus id="_IDGenObjectStatus1" text="{
 						path: 'invoice>Status',
 						formatter: '.formatter.statusText'
-					}" />
+					}" /> 
                             </firstStatus>
                         </items>
                     </List>
