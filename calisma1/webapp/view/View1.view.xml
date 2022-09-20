@@ -8,7 +8,14 @@
                         <Input id="_IDGenInput1" value="{/recipient/name}" valueLiveUpdate="true" class="sapUiSmallMarginEnd" width="auto" textAlign="Begin" />
                         <Text id="_IDGenText1" text="Said {/recipient/name}" class="sapUiSmallMargin colorText" width="auto" />
                     </HBox>
-                    <List id="_IDGenList1" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
+                    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
+                    <headerToolbar>
+                        <Toolbar id="_IDGenToolbar1">
+                            <Title id="_IDGenTitle1" text="{i18n>invoiceListTitle}" />
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                            <SearchField id="_IDGenSearchField1" width="50%" search=".onFilterInvoices" />
+                        </Toolbar>
+                    </headerToolbar>
                         <items>
                             <ObjectListItem
                                 id="_IDGenObjectListItem1"
@@ -22,13 +29,14 @@
 				}"
                                 numberUnit="USD"
                                 numberState="{=	${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-                            />
-                            <firstStatus>
-                                <ObjectStatus id="_IDGenObjectStatus1" text="{
+                            >
+                                <firstStatus>
+                                    <ObjectStatus id="_IDGenObjectStatus1" text="{
 						path: 'invoice>Status',
 						formatter: '.formatter.statusText'
-					}" /> 
-                            </firstStatus>
+					}" />
+                                </firstStatus>
+                            </ObjectListItem>
                         </items>
                     </List>
                 </content>
