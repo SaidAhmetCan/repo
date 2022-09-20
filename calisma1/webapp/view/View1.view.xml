@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="calisma1.controller.View1" displayBlock="true">
-    <App id="_IDGenApp1">
+    <App id="_IDGenApp1"> 
         <pages>
             <Page id="page" title="{i18n>title}">
                 <content>
