@@ -7,6 +7,7 @@ sap.ui.define([
 	"sap/ui/model/FilterOperator"
 ], 
     /**
+     * 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
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
     function (Controller, MessageToast, JSONModel, formatter, Filter, FilterOperator) {
@@ -21,6 +22,12 @@ sap.ui.define([
                     currency: "TRY"
                 });
                 this.getView().setModel(oViewModel, "view");
+
+                var oViewModel2 = new JSONModel({
+                    quantity: "Adet"
+                } );
+                this.getView().setModel(oViewModel2, "view2");
+
             },
             
             onShowHello : function () {
@@ -28,7 +35,7 @@ sap.ui.define([
                 var oBundle = this.getView().getModel("i18n").getResourceBundle();
                 var sRecipient = this.getView().getModel().getProperty("/recipient/name");
                 var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-    
+     
                 // show message
                 MessageToast.show(sMsg);
             },

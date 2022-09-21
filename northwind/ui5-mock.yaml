@@ -2,7 +2,7 @@
 
 specVersion: "2.5"
 metadata:
-  name: calisma1
+  name: northwind
 type: application
 server:
   customMiddleware:
@@ -16,9 +16,7 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /sap
-            url: http://localhost
-          - path: /v3/northwind/northwind.svc
+          - path: /v3
             url: https://services.odata.org
     - name: fiori-tools-appreload
       afterMiddleware: compression
@@ -26,8 +24,13 @@ server:
         port: 35729
         path: webapp
         delay: 300
-    - name: fiori-tools-preview
-      afterMiddleware: fiori-tools-appreload
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
       configuration:
-        component: calisma1
-        ui5Theme: sap_horizon
+        mountPath: /
+        services:
+          - urlPath: /v3/northwind/northwind.svc
+            metadataPath: ./webapp/localService/metadata.xml
+            mockdataPath: ./webapp/localService/data
+            generateMockData: true
+        annotations: []

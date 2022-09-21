@@ -1,44 +1,99 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="calisma1.controller.View1" displayBlock="true">
-    <App id="_IDGenApp1"> 
+    <App id="_IDGenApp1">  
         <pages>
             <Page id="page" title="{i18n>title}">
                 <content>
+                <!--
                     <HBox width="100%" id="hbox1" alignItems="Center">
-                        <Button id="_IDGenButton1" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd" />
-                        <Input id="_IDGenInput1" value="{/recipient/name}" valueLiveUpdate="true" class="sapUiSmallMarginEnd" width="auto" textAlign="Begin" />
-                        <Text id="_IDGenText1" text="Said {/recipient/name}" class="sapUiSmallMargin colorText" width="auto" />
+                        <Button id="_IDGenButton1" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"/>
+                        <Input id="_IDGenInput1" value="{/recipient/name}" valueLiveUpdate="true" class="sapUiSmallMarginEnd" width="auto" textAlign="Begin"/>
+                        <Text id="_IDGenText1" text="Said {/recipient/name}" class="sapUiSmallMargin colorText" width="auto"/>
                     </HBox>
                     <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
                     <headerToolbar>
                         <Toolbar id="_IDGenToolbar1">
-                            <Title id="_IDGenTitle1" text="{i18n>invoiceListTitle}" />
-                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
-                            <SearchField id="_IDGenSearchField1" width="50%" search=".onFilterInvoices" />
+                            <Title id="_IDGenTitle1" text="{i18n>invoiceListTitle}"/>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                            <SearchField id="_IDGenSearchField1" width="50%" search=".onFilterInvoices"/>
                         </Toolbar>
                     </headerToolbar>
                         <items>
-                            <ObjectListItem
-                                id="_IDGenObjectListItem1"
-                                title="{invoice>Quantity} x {invoice>ProductName}"
-                                number="{
-					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-					type: 'sap.ui.model.type.Currency',
-					formatOptions: {
-						showMeasure: false
-					}
-				}"
-                                numberUnit="USD"
-                                numberState="{=	${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-                            >
+                            <ObjectListItem id="_IDGenObjectListItem1" title="{invoice>Quantity} x {invoice>ProductName}" number="{      parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],      type: 'sap.ui.model.type.Currency',      formatOptions: {       showMeasure: false      }     }" numberUnit="USD" numberState="{= ${invoice>ExtendedPrice} &gt; 50 ? 'Error' : 'Success' }">
                                 <firstStatus>
-                                    <ObjectStatus id="_IDGenObjectStatus1" text="{
-						path: 'invoice>Status',
-						formatter: '.formatter.statusText'
-					}" />
+                                    <ObjectStatus id="_IDGenObjectStatus1" text="{       path: 'invoice>Status',       formatter: '.formatter.statusText'      }"/>
                                 </firstStatus>
                             </ObjectListItem>
                         </items>
                     </List>
+                   
+                     <List id="invoiceList2" headerText="{i18n>invoiceListTitle2}" class="sapUiResponsiveMargin" width="auto" items="{northwind>/Products}">
+                        <items>
+                            <ObjectListItem id="_IDGenObjectListItem2" title="{northwind>ProductName}">
+                            </ObjectListItem>
+                            <ObjectListItem id="_IDGenObjectListItem3" title="{northwind>QuantityPerUnit}">
+
+                            </ObjectListItem>
+                        </items>
+                    </List>
+                   -->
+                     <Table noDataText="Drop column list items here and columns in the area above" id="table0" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" 
+                    
+                     items="{
+                    path: 'northwind>/Products',
+                    sorter: {
+                        path: 'ProductName',
+                        descending: false
+                    }
+                }"
+                     >
+                    
+                         <items>
+                   
+                             <ColumnListItem type="Active" id="item0">
+                   
+                                 <cells>
+                   
+                                     <Text text="{northwind>ProductName}" id="text11"/>
+                   
+                                     <Text text="{northwind>QuantityPerUnit}" id="text12"/>
+                   
+                                     <Text text="Row 1 Cell 3" id="text13"/></cells>
+                   
+                             </ColumnListItem>
+                   
+                         </items>
+                   
+                         <columns>
+                   
+                             <Column id="column0">
+                   
+                                 <header>
+                   
+                                     <Label text="Product Name" id="label0"/>
+                   
+                                 </header>
+                   
+                             </Column>
+                   
+                             <Column id="column1">
+                   
+                                 <header>
+                   
+                                     <Label text="Quantity Unit" id="label1"/>
+                   
+                                 </header>
+                   
+                             </Column>
+                   
+                             <Column id="column2">
+                   
+                                 <header>
+                   
+                                     <Label text="Header 3" id="label2"/>
+                   
+                                 </header>
+                   
+                             </Column></columns></Table>
                 </content>
             </Page>
         </pages>

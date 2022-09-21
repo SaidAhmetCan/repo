@@ -24,6 +24,15 @@
                     "localUri": "localService/metadata.xml",
                     "odataVersion": "2.0"
                 }
+            },
+            "northwind": {
+                "uri": "/v3/northwind/northwind.svc",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "annotations": [],
+                    "localUri": "localService/northwind/metadata.xml"
+                }
             }
         }
     },
@@ -46,7 +55,7 @@
     "sap.ui5": {
         "flexEnabled": true,
         "dependencies": {
-            "minUI5Version": "1.106.0",
+            "minUI5Version": "1.105.0",
             "libs": {
                 "sap.m": {},
                 "sap.ui.core": {},
@@ -77,6 +86,15 @@
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
+            },
+            "northwind": {
+                "dataSource": "northwind",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false
+                }
             }
         },
         "resources": {
@@ -122,4 +140,4 @@
             "id": "App"
         }
     }
-} 
+}
